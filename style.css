@@ -3,33 +3,164 @@
     padding:0;
 }
 
-body{
+/* body{
     background: linear-gradient(160deg, teal, aqua);
-}
+} */
 
 header{
-    background-color: blue;
+    border-bottom: 2px solid blue;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+nav{
+    width: 90%;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links{
+    width: 100%;
+    height: 80px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
 .links{
-    color: white;
+    color: #121212;
+    font-size: 17px;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.links:hover{
+    color: blue;
 }
 
 #about{
     background-color: black;
     color: white;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+}
+
+.content-photo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-inner{
+    position: relative;
+    width: 80%;
     height: 500px;
+    border-radius: 20px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.tag{
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    padding: 5px 30px;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid blue;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.content-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
 }
 
 h1{
-    font-size: 30px;
+    font-size: 60px;
+    background: linear-gradient(40deg, green, blue);
+    background-clip: text;
+    color: transparent;
 }
 
-p{
-    font-size:20px;
+.paragraph{
+    font-size:18px;
+    color: rgb(194, 193, 193);
 }
 
 footer{
-    background-color: blue;
+    height: 50px;
+    border-top: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    header{
+        height: 200px;
+    }
+
+    nav{
+        height: 150px;
+    }
+
+    .nav-links{
+        height: 150px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .content-photo{
+        width: 100%;
+    }
+
+    .photo-inner{
+        width: 50%;
+        height: 300px;
+    }
+
+    .content-text{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .paragraph{
+        font-size: 17px;
+    }
 }
